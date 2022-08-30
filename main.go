@@ -12,6 +12,7 @@ import (
 // home handler is unexported due to no other package requiring the handler
 func home(w http.ResponseWriter, r *http.Request) {
 	response := "Home page"
+	fmt.Fprintf(w, response)
 	json.NewEncoder(w).Encode(response)
 }
 
