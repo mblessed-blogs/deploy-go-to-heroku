@@ -18,7 +18,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 
 // portNumber
-var portNumber = os.Getenv("PORT_NUMBER")
+var portNumber = os.Getenv("PORT")
 
 func main() {
 	// create a new router
