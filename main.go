@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/go-chi/chi"
 )
@@ -17,7 +18,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 
 // portNumber
-const portNumber = ":8000"
+var portNumber = os.Getenv("PORT_NUMBER")
 
 func main() {
 	// create a new router
